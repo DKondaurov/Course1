@@ -2,9 +2,9 @@ package pro.sky.java.course1;
 
 public class Employee {
     private static int id;
-    String name;
-    int salary;
-    int department;
+    private final String name;
+    private int salary;
+    private int department;
 
 
     public Employee(String name, int salary, int department) {

@@ -2,8 +2,9 @@ package pro.sky.java.course1;
 
 public class Main {
 
+    public static final Employee[] employees = new Employee[10];
+
     public static void main(String[] args) {
-        Employee[] employees = new Employee[10];
         employees[Employee.getid()] = new Employee("Новиков Донат Аристархович", 259645, 5);
         employees[Employee.getid()] = new Employee("Давыдов Виссарион Федосеевич", 437676, 1);
         employees[Employee.getid()] = new Employee("Горбачёв Юрий Дмитриевич", 23372, 2);
@@ -15,21 +16,21 @@ public class Main {
         employees[Employee.getid()] = new Employee("Федотов Аверьян Александрович", 86071, 2);
         employees[Employee.getid()] = new Employee("Селезнёв Василий Эльдарович", 354469, 1);
 
-        listOfAllEmployees(employees);
+        listOfAllEmployees();
 
-        totalSalary(employees);
+        totalSalary();
 
-        minSalary(employees);
+        minSalary();
 
-        maxSalary(employees);
+        maxSalary();
 
-        averageSalary(employees);
+        averageSalary();
 
 
     }
 
-    private static void averageSalary(Employee[] employees) {
-        float salary = 0;
+    private static void averageSalary() {
+        double salary = 0;
         int i = 0;
         for (; i < employees.length; i++) {
             salary = salary + employees[i].getSalary();
@@ -37,7 +38,7 @@ public class Main {
         System.out.println("Средняя зарплата = " + salary / i + " руб.");
     }
 
-    private static void maxSalary(Employee[] employees) {
+    private static void maxSalary() {
         int salary = 0;
         for (int i = 0; i < employees.length; i++) {
             if (salary < employees[i].getSalary()) {
@@ -47,7 +48,7 @@ public class Main {
         System.out.println("Максимальная зарплата = " + salary + " руб.");
     }
 
-    private static void minSalary(Employee[] employees) {
+    private static void minSalary() {
         int salary = 600000;
         for (int i = 0; i < employees.length; i++) {
             if (salary > employees[i].getSalary()) {
@@ -58,7 +59,7 @@ public class Main {
     }
 
 
-    private static void totalSalary(Employee[] employees) {
+    private static void totalSalary() {
         int salary = 0;
         for (int i = 0; i < employees.length; i++) {
             salary = salary + employees[i].getSalary();
@@ -66,7 +67,7 @@ public class Main {
         System.out.println("Общая зарплата = " + salary + " руб.");
     }
 
-    private static void listOfAllEmployees(Employee[] employees) {
+    private static void listOfAllEmployees() {
         for (int i = 0; i < employees.length; i++) {
             System.out.println(employees[i]);
         }
