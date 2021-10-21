@@ -42,6 +42,6 @@ public class Employee {
     }
 
     public String toString() {
-        return  "ФИО: " + name + ". Зарплата " + salary + " рублей. Отдел " + department;
+        return "ФИО: " + name + ". Зарплата " + salary + " рублей. Отдел " + department;
     }
 }

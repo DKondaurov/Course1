@@ -40,22 +40,26 @@ public class Main {
 
     private static void maxSalary() {
         int salary = 0;
+        int maxSalaryId = 0;
         for (int i = 0; i < employees.length; i++) {
             if (salary < employees[i].getSalary()) {
                 salary = employees[i].getSalary();
+                maxSalaryId = i;
             }
         }
-        System.out.println("Максимальная зарплата = " + salary + " руб.");
+        System.out.println("Сотрудник с максимальной зарплатой " + employees[maxSalaryId].getName());
     }
 
     private static void minSalary() {
         int salary = 600000;
+        int minSalaryId = 0;
         for (int i = 0; i < employees.length; i++) {
             if (salary > employees[i].getSalary()) {
                 salary = employees[i].getSalary();
+                minSalaryId = i;
             }
         }
-        System.out.println("Минимальная зарплата = " + salary + " руб.");
+        System.out.println("Сотрудник с минимальной зарплатой " + employees[minSalaryId].getName());
     }
 
 
